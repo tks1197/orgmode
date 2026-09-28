@@ -1098,6 +1098,27 @@ Example:
 * TODO [#C] I'm lowest in priority
 #+end_src
 
+*** org_priority_start_cycle_with_default
+:PROPERTIES:
+:CUSTOM_ID: org_priority_start_cycle_with_default
+:END:
+- Type: =boolean=
+- Default: =true=
+Cycling priorities on a task without a priority starts at [[#org_priority_default][org_priority_default]].
+When disabled, cycling starts one priority higher or lower than =org_priority_default=.
+Example:
+
+Enabled (default):
+#+begin_src org
+* TODO [#B] This task has the default priority
+#+end_src
+
+Disabled:
+#+begin_src org
+* TODO [#A] This task has the next higher priority
+* TODO [#C] And this one has the next lower priority
+#+end_src
+
 *** org_agenda_skip_scheduled_if_done
 :PROPERTIES:
 :CUSTOM_ID: org_agenda_skip_scheduled_if_done
